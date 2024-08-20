@@ -186,5 +186,5 @@ PATH environment variable is location which shell will search for executable pro
 -  `\` to change line in CLI, if space in folder name
 
 1. `cat auth.log | grep "input_userAuth_update" | awk '{print $9} | sort -u  >  users.txt` => 1-look at content of auth.log, 2- search for "input_userAuth_update", 3- print the 9th word of line, 4- sort alphabetically, 5- redirect the result, 6- redirect to a file name "users.txt"
-2. `ssh -i .ssh.id_rsa ubuntu@10.12.111.234` => path of private key, VM username, VM IP
+2. `ssh -i .ssh/id_rsa ubuntu@10.12.111.234` => path of private key, VM username, VM IP
 
