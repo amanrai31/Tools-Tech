@@ -39,10 +39,10 @@ Note : Spacing and spelling matters also command should come first before option
 1. root `:/` - highest level of file system, containes all other directories.
 2. home ` ~ ` - user personal file.  (~/Desktop == /home/Desktop)
 
-/etc   (common config)
-/bin, /sbin (common programs)
-/lib  (shared lib & modules)
-/dev, /proc, /sys (kernel & system info)
+/etc   (common config).
+/bin, /sbin (common programs).
+/lib  (shared lib & modules).
+/dev, /proc, /sys (kernel & system info).
 
 - Absolute path (/home/aman/Desktop)
 - Relative path (..Desktop) [ e.g. current dir=Picture(parent is home) & want to go in Desktop(parent is home) ]
@@ -68,7 +68,7 @@ Note : `wildCards - (* and ?)` (* for all and ? for selected one) e.g. `mv Deskt
 ## MultiUser envionment (Modern linux supports multiuser facility)
 
 Normal user - Can modify their own file, but can not make system wide changes.
-SuperUser/RootUser - Can do both.
+SuperUser/RootUser - Can do both. (SuperUser home directory is root)
 
 Note : Not reccomended to use the root acc. for normal user. Admistrator can borrow root's privilages using sudo command.
 
@@ -79,7 +79,10 @@ su command - set user/ switch user
 3. `sudo -s` (use root shell as superuser)
 4. `sudo -k` (give upadmistrator privilages)
 
-## File Permissions (rwx- Read,write, execute)
+## File Permissions (Octal file permission, symbolic file permission)
+
+#### 1. Octal file permission
+(rwx- Read,write, execute)
 
 rwxrwxrwx - 1st 3 letters are for user, 2nd 3 are for group, 3rd 3 are for others
 
@@ -89,6 +92,41 @@ rwxrwxrwx - 1st 3 letters are for user, 2nd 3 are for group, 3rd 3 are for other
 | group    |   r       |   -     |   x     |  5     |
 | others   |   r       | -       | -       |  4     |
 
+- 754 (rwxr-xr--)  --(user-read,write,execute | group- read,execute | other-read)
+- 644 (rw-r--r--)
+- 755 (rwxr-xr-x)
+
+#### 2. Symbolic file permission (add,assign,subtract)
+
+- `u+rwx` - giving all permission to User (for group- `g+rwx` | for others- `o+rwx`)
+- `o=r` - giving only read permission to others
+- `o-rwx` - no permission to other
+- `a=rwx` - all permission to all.
+
+#### Commands related to permissions
+
+1. `chmod 666 test.sh` = `chmod a-x test.sh` = `chmod -x test.sh` (Snitch execute permission from all)  . NOW--
+2. `chmod 266 test.sh` = ` chmod u-r test.sh` (snitch read permission from user)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Note : `nano test.sh` edit this file in nano text editor.
