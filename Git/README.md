@@ -18,7 +18,9 @@ Suppose I am on main branch and i want the changes done by me on main branch to 
 9. After 1st time- regular commands- `git add .` | `git commit -m "Commit message"` | `git push`
 
 Note: `git status` - Untracked, Modified, Staged, Unmodified. 
-Note: `git log` - For logs
+
+Note: `git log` - For logs (History of commits-All HASH are there)
+
 Note: `git diff <branchName>` - See diff between current branch and given branch
 
 ## From remote to local (Remote => local)
