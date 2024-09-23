@@ -47,6 +47,7 @@ Note : Spacing and spelling matters also command should come first before option
 - Absolute path (/home/aman/Desktop)
 - Relative path (..Desktop) [ e.g. current dir=Picture(parent is home) & want to go in Desktop(parent is home) ]
 
+Some common commands - [ `date`-shows date || `pwd`- presend working directory]
 1. `cd "Exercise file` OR `cd Exercise\file`
 2. `ls -r Desktop` (Go recursively - looks at all subfolders)
 3. `cd` (takes to /home)
