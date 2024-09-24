@@ -191,4 +191,5 @@ PATH environment variable is location which shell will search for executable pro
 
 ---
 
+#### Hit the link below for BASH Scripting.
 - [Bash scripting](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
