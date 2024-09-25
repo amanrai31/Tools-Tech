@@ -1,3 +1,4 @@
+# HOST, IP AND NETWORK
 ***Host -*** Any device which sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers].
 
 ***Client -***  Device that intiates request.
@@ -16,3 +17,7 @@ Before n/w transferring data required portable media (Disk, CD, penDrives etc)
 
 We can have nested networks (Subnet)
 E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] have own n/w .
+
+---
+
+#
