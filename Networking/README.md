@@ -24,7 +24,7 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 ***Repeaters -*** It regenrates signals, allowing comm. across long distances.
 
-![image](https://github.com/user-attachments/assets/89c79be0-6037-4d3f-bdbd-d56c9f6e96bf)
+- [image](https://github.com/user-attachments/assets/89c79be0-6037-4d3f-bdbd-d56c9f6e96bf)
 
 
 
