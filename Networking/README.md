@@ -3,3 +3,5 @@
 ***Client -***  Device that intiates request.
 
 ***Server -***  Device that responds.
+
+- ***Note -*** Client and server are relative terms depends on specific communication.
