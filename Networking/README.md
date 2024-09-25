@@ -22,9 +22,11 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 # [Switch, Router] & [Repeater,Hub and Bridge]
 
-***Repeaters -*** It regenrates signals, allowing comm. across long distances.
+***Repeaters -*** It regenrates signals, NEED- allowing comm. across long distances.
+***Hub -*** It is multi-port repeter. NEED- Connecting hosts directly to each other does not scale, hub gives a centalise space for hosts to connect.
 
 
 
+- [Resource](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
 
 
