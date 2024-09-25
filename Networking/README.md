@@ -11,7 +11,7 @@ Every host on the internet has IP address. IP is unique identifier for each host
 
 IP Address- 32 bits `01000101001010100011100010100101`, Containing 4 chunks `01000101`, `00101010`, `00111000`, `10100101` => `69`.`42`.`56`.`165`. Each with range 0-255 as 8bit min_value=0 & max_value=255
 
-***Network(n/w) -*** Host are connected to each other through n/w.
+***Network(n/w) -*** Host are connected to each other through n/w. Logical grouping of hosts.
 
 Before n/w transferring data required portable media (Disk, CD, penDrives etc)
 
@@ -20,4 +20,11 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 ---
 
-#
+# [Switch, Router] & [Repeater,Hub and Bridge]
+
+***Repeaters -*** It regenrates signals, allowing comm. across long distances.
+
+![image](https://github.com/user-attachments/assets/89c79be0-6037-4d3f-bdbd-d56c9f6e96bf)
+
+
+
