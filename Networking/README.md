@@ -8,4 +8,4 @@
 
 Every host on the internet has IP address.
 
-IP Address- 32 bits `01000101001010100011100010100101`, Containing 4 chunks `01000101`, `00101010`, `00111000`, `10100101`
+IP Address- 32 bits `01000101001010100011100010100101`, Containing 4 chunks `01000101`, `00101010`, `00111000`, `10100101` => `69`.`42`.`56`.`165`
