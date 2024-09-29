@@ -36,8 +36,8 @@ Note : Spacing and spelling matters also command should come first before option
 8. ctrl + r        - (Search command and history)
 
 ## File system
-1. root `:/` - highest level of file system, containes all other directories.
-2. home ` ~ ` - user personal file.  (~/Desktop == /home/Desktop)
+1. root `:/` - highest level of file system, containes all other directories [bin boot cdrom dev etc home lib64  libx32 root sbin  snap sys usr var]
+2. home ` ~ ` - [We can have multiple users like user1, user2 etc.], inside that=>user personal file like Desktop,Downloads, Public, Pictures (~/Desktop == /home/Desktop).
 
 /etc   (common config) |
 /bin, /sbin (common programs) | 
