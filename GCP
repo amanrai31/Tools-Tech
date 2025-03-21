@@ -4,7 +4,7 @@
 2. Advance security practices - IAM, infra security, N/W security, data security, security operations.
 3. Data management - Object storage on GCP (SQL, NOSQL)
 
-### Fundamental concepts
+### 1. Fundamental concepts
 
 #### 1(a) GC Compliance => (Rules, regulations, legalities)
 
@@ -130,7 +130,7 @@ Data security best practices
 
 ----
 
-
+### 3. Object storage on GCP
 
 
 
