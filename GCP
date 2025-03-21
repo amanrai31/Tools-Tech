@@ -94,6 +94,19 @@ HOW to create VM in GCE
 
 #### 2(c) N/W Scurity
 
+**VPC(Virtual private network):** A virtual version of on-premise physical n/w. Benfits => It is considered a global resource, flexible & scalable, sharale, isolation
+
+=> To create VPC you must create a Project
+
+VPC is a cloud service that allow create & manage resources in logically isolated virtual n/w (Isolated PVT n/w within a public cloud) 
+
+**NOTE :** Each project has its own VPC(isolated from other env), we can create seperate env for dev, testing and prod.
+
+- VPC is made up of subnets
+- Firewall controls the n/w traffic flow & enforce at VM level
+- VPC Peering allow internal resource to connect other VPC
+
+**Firewall Rules =>** Allow or deny n/w traffic
 
 
 
