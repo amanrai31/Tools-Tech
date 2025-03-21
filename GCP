@@ -5,4 +5,4 @@
 3. Data management - Object storage on GCP (SQL, NOSQL)
 
 1(a) GC Compliance => (Rules, regulations, legalities)
-1(b) Resource hierarchy => ` `ORG` => `departments` => `teams` => `product` `
+1(b) Resource hierarchy => `ORG` => `departments` => `teams` => `product` 
