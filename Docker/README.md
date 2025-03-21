@@ -3,3 +3,7 @@
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
+---
+
+Think docker image as `class` & docker containers as `objects`
