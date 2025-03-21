@@ -130,9 +130,11 @@ Data security best practices
 
 ----
 
-### 3. Object storage on GCP
+### 3. Data management
 
+#### 3(a). Object storage on GCP
 
+Features of object storage- Config obj lifecycle management, multiple redundency options (store data in multiple locations)
 
 
 
