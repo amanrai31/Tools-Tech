@@ -100,7 +100,7 @@ HOW to create VM in GCE
 
 VPC is a cloud service that allow create & manage resources in logically isolated virtual n/w (Isolated PVT n/w within a public cloud) 
 
-**NOTE :** Each project has its own VPC(isolated from other env), we can create seperate env for dev, testing and prod.
+**NOTE :** Each project has its own VPC(isolated from other env), we can create seperate env for dev, testing and prod. Associate your VPC to a VM.
 
 - VPC is made up of subnets
 - Firewall controls the n/w traffic flow & enforce at VM level
@@ -111,6 +111,12 @@ Firewall rules are applied all the time either VM is on/off.
 
 SMTP (PORT 25) - Always blocked on GC.
 DHCP (PORT 67) - ALways allowed.
+
+**SUBNET =>** It let you create own pvt cloud topology within GCP. N/W are global resource & subnet are regional resource.
+
+Additonal VPC n/w tools => Load balancer, cloud armor, C security command center, C identity aware proxy.
+
+
 
 
 
