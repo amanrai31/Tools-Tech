@@ -1,1 +1,8 @@
+# GCP (Related to my JECP project)
 
+1. Fundamental concepts - Compliance requirements, resource hierarchy, cost optimization, geographical segmentation strategy.
+2. Advance security practices - IAM, infra security, N/W security, data security, security operations.
+3. Data management - Object storage on GCP (SQL, NOSQL)
+
+1(a) GC Compliance => (Rules, regulations, legalities)
+1(b) Resource hierarchy => ` `ORG` => `departments` => `teams` => `product` `
