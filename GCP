@@ -68,7 +68,18 @@ If resource "z" moves from project A  to project B then polices of project B wil
 
 **IAM Best practices**
 - Give bare minimum permission to user, pgm or process 
+- Seperate service account for each user/service & give only necessry permissions
+- **Manage resource using project(isolated)**
+- Utilize google group instead individual role
+- Rotate user managed service acc keys regularly
 
+**NOTE :** Access control for google cloud resource is managed by IAM policies
+
+#### 2(b)
+
+Computing Services - GC Engine/ GCE (Create VMs), App engine(web mobile backend), k8s engine(container service), cloud f/n, cloud run, VMWARE engine
+
+- GCE => IaaS, create & manage VMs, Customer is responsible for full config (creation of VM, OS, RAM, PROCESSOR, update security patches (Use premptible VM to save cost(auto on/off))
 
 
 
