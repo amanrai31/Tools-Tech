@@ -106,7 +106,11 @@ VPC is a cloud service that allow create & manage resources in logically isolate
 - Firewall controls the n/w traffic flow & enforce at VM level
 - VPC Peering allow internal resource to connect other VPC
 
-**Firewall Rules =>** Allow or deny n/w traffic
+**Firewall Rules =>** Allow or deny n/w traffic connections to & from your VM. Firewall rules are statefull(bidirectional) & always enforced . Enforced at VM level & VPC defined at n/w level. 
+Firewall rules are applied all the time either VM is on/off.
+
+SMTP (PORT 25) - Always blocked on GC.
+DHCP (PORT 67) - ALways allowed.
 
 
 
