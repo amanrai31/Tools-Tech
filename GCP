@@ -116,9 +116,19 @@ DHCP (PORT 67) - ALways allowed.
 
 Additonal VPC n/w tools => Load balancer, cloud armor, C security command center, C identity aware proxy.
 
+#### 2(d) DATA SECURITY (Bucket - container for data)
 
+CSEK - Customer supplied encryption keys
+SMEK - Customer managed encryption keys
 
+Data encryption option
+- We have verious encryption algo, data is encrpted before written to disk, google do not handle client side encrption.
 
+Data security best practices
+
+- Store data in region closest to your application user, don not share credentials, use TLS (HTTPS) protocol to transport your data.
+
+----
 
 
 
