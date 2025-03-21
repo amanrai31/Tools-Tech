@@ -4,5 +4,105 @@
 2. Advance security practices - IAM, infra security, N/W security, data security, security operations.
 3. Data management - Object storage on GCP (SQL, NOSQL)
 
-1(a) GC Compliance => (Rules, regulations, legalities)
-1(b) Resource hierarchy => `ORG` => `departments` => `teams` => `product` 
+### Fundamental concepts
+
+#### 1(a) GC Compliance => (Rules, regulations, legalities)
+
+#### 1(b) Resource hierarchy 
+`ORG` => `departments` => `teams` => `product` 
+
+`ORG` => `folder` => `project` => `resources`
+
+Project[dev project, test project, prod project] => Resources [CS bucket, App engine service, compute engine instance]
+
+IAM (Identity & access management) - Who can do what on which resource.
+
+#### 1(c) Cost optimization
+
+Billing setup in GCP - Based on diff service classes, Consumption based model, Application on discount
+
+Pricing - Hourly, monthly, yearly, commitment(1y/3y)
+
+Cost optimization stratgies - Enable GuardRails(billing alerts), using discount(commitment plans), optimise workLoad(use cloud native service, reduce hardware).
+
+#### 1(d) Google n/w infra (geographical segmentation strategy)
+
+Regions => ZONES => n/w edge location => countries and territories
+
+Zonal OR regional (compute engines) || Multiregional(dual OR multi region) || global(vpc n/w)
+
+----
+
+### 2. Advance security practices
+
+Infra & services - Compute, IAM & security, n/w, Storage & DB, IOT, BigData, cloud AI, Data transfer, management tool
+
+#### 2(a) IAM
+
+Set resource hierarchy correctly to avoid security risks.
+Underlaying resources inherit policy permissions from parent resource
+
+ORG Node => Root node represents your org(yourBussiness.com)- some services may not available if ORG node not created.
+
+Folder Node => map properly (HR folder for HR department like that)
+
+Project Node => Child of org or folder node, contains all resources
+
+Service node => Actual GC services e.g. compute engine, BigQuery, storage bucket
+
+**IAM Policies** => Create policies to apply on resource to control access
+
+3 Factor makes up a policy
+- Members => users, employee OR service account OR google group
+- Roles => collection of permissions, compute admin, 
+- Logic conditions => Extra constraints (Access during office hours only)
+
+Policy applied in 2ways => 1. Transitive inheritance 2. Direct Assignment
+
+If resource "z" moves from project A  to project B then polices of project B will be applicable from now.
+
+**Role Type**
+- Basic => Owner, editor, viewer
+- Predefined(Best practices) => Compute admin, app engine etc.
+- Custom => Require high maintanance
+
+**IAM Best practices**
+- Give bare minimum permission to user, pgm or process 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
