@@ -81,6 +81,17 @@ Computing Services - GC Engine/ GCE (Create VMs), App engine(web mobile backend)
 
 - GCE => IaaS, create & manage VMs, Customer is responsible for full config (creation of VM, OS, RAM, PROCESSOR, update security patches (Use premptible VM to save cost(auto on/off))
 
+- App engine => PaaS, reliable & high performance, build,develop& host web app.
+
+HOW to create VM in GCE
+- Give details(name, region, zone, machine config), OS, API Access, HTTP Traffic. After installing any web server (NGINX) - external IP of VM internal IP of VM
+
+**Infra security best practices**
+- Secure n/w using firewall, load blancer OR encrpt
+- Isolate your PROD resource from internet(Isolate from public use, cut use of public IP)
+- Apply principle of least privilage (IAM recommended)
+- Enable log collection & monitor your VM
+
 
 
 
