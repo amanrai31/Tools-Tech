@@ -1,4 +1,4 @@
-# GCP (Related to my JECP project)
+# GCP (Related to my JECP project) (2nd CHAPTER IS IMPORTANT)
 
 1. Fundamental concepts - Compliance requirements, resource hierarchy, cost optimization, geographical segmentation strategy.
 2. Advance security practices - IAM, infra security, N/W security, data security, security operations.
@@ -75,7 +75,7 @@ If resource "z" moves from project A  to project B then polices of project B wil
 
 **NOTE :** Access control for google cloud resource is managed by IAM policies
 
-#### 2(b)
+#### 2(b) Infrastructure security
 
 Computing Services - GC Engine/ GCE (Create VMs), App engine(web mobile backend), k8s engine(container service), cloud f/n, cloud run, VMWARE engine
 
@@ -91,6 +91,8 @@ HOW to create VM in GCE
 - Isolate your PROD resource from internet(Isolate from public use, cut use of public IP)
 - Apply principle of least privilage (IAM recommended)
 - Enable log collection & monitor your VM
+
+#### 2(c) N/W Scurity
 
 
 
