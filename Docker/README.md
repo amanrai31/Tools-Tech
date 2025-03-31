@@ -7,3 +7,8 @@
 ---
 
 Think docker image as `class` & docker containers as `objects`
+
+Flags =>
+1. -d(--detach),-rm (remove container after it stops),-h(--hostname)
+2. -e (--env => environment), -v (Mounts a volume (binds host & container storage)), --restart (Defines the restart policy (e.g., always, on-failure).)
+3. --network(Connects container to a specific network.), -p (	--publish => Maps host port → container port (host:container).)
