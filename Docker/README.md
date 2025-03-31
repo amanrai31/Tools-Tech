@@ -6,7 +6,7 @@
 
 ---
 
-Think docker image as `class` & docker containers as `objects`
+**Think docker image as `class` & docker containers as `objects`**
 
 Flags =>
 1. -d(--detach),-rm (remove container after it stops),-h(--hostname)
@@ -15,4 +15,7 @@ Flags =>
 4. -f (--file => Specifies a custom Dockerfile (docker build).), --pull (	Always pulls the latest base image during build)
 5. -a(-all => Show all containers, even stopped ones.), -q(quiet => Show only container IDs.), --name (Assigns a custom name to the container.)
 
+---
+
+DOCKER => 1.installtion, 2. create docker file, 3. create docker image, 4. running containers, 5.pre-defined images, 6. docker hub, 7. docker volume & network, 8. Docker compose.
 
