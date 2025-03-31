@@ -19,3 +19,46 @@ Flags =>
 
 DOCKER => 1.installtion, 2. create docker file, 3. create docker image, 4. running containers, 5.pre-defined images, 6. docker hub, 7. docker volume & network, 8. Docker compose.
 
+1. Installation
+
+- install docker engine (local)
+- install docker desktop (local)
+- Docker Hub - (remote access => push your images here)
+
+```bash sudo apt install ./docker-desktop-amd64.deb``` => installs both Docker engine & Docker desktop
+
+We can install Linux in docker world instead of installing it in virtualBox; Docker comes with its own virtual env. We can install mongo,redis etc. in docker way so they face same conditions & bugs in local ENV as well as in PROD ENV.
+
+- Docker engine APIs => Controls the Docker daemon (dockerd) on your machine. Used to manage containers, images, networks, and volumes programmatically. Supports both REST API & CLI commands
+- Docker Hub APIs => Interacts with Docker Hub (hub.docker.com). Used to search, pull, and manage images on Docker Hub. Requires authentication for private repositories.
+- Resistry APIs => Manages images in a private Docker registry (e.g., AWS ECR, Azure ACR, Harbor, GitHub Container Registry). Used to store and distribute private container images.
+
+---
+
+ **NOTE :** Docker images are built from multiple read-only layers. Each Dockerfile command (RUN, COPY, etc.) creates a new layer. Layers are cached and reused to speed up builds. The final running container has a writable top layer.
+
+ ``` docker pull <image-name> ``` => pulls image
+
+ ``` docker image ls ``` => list of images
+
+ ``` docker run -e POSTGRES_PASSWORD=mysecretepassword -d postgres ``` => To run docker container, the postgres here is image name, we can add version here also.
+
+ ```docker run --name <container-name> -e MONGO_PASSWORD=mypassword -d mongo``` 
+ 
+ ``` docker ps ``` => check running containers. ```docker ps -a``` => Checks all running containers. Here ps stands for proccess status, similiar to linux.
+
+ ```docker stop <container-name>``` || ```docker stop <container-id>```
+
+ ```docker container prune``` => removes all stopped containers.
+
+ **Diff b/w docker & VM =>** Docker do not have kernel, it uses host's kernel (VM requires full OS per VM). Docker users container(VM uses virtualized OS). Docker has process level isolation(VM has full OS isolation)
+
+
+ 
+
+
+
+
+
+
+
