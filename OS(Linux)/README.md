@@ -217,7 +217,17 @@ Type1 hypervisor (Bare metal) => Installed directly on hardware (no OS in betwee
 
 ```scss
 Hardware
-├── Hypervisor (ESXi, Hyper-V)
+├── Hypervisor (ESXi, Hyper-V, Xen)
     ├── VM 1 (Ubuntu)
     ├── VM 2 (Windows)
+```
+
+Tpe 2 hypervisor ( Hosted ) => Runs on top of an existing OS (like an application).E.g. VirtualBox, VMware Workstation. Slower than Type 1, used for development/testing.
+
+```scss
+Hardware
+├── Host OS (Windows/Linux)
+    ├── Hypervisor (VirtualBox)
+        ├── VM 1 (Ubuntu)
+        ├── VM 2 (Windows)
 ```
