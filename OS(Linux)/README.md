@@ -211,6 +211,13 @@ XNU Kernel (iOS, iPadOS, watchOS, iPhone with modification)
 
 #### Hypervisor
 
-It allows multiple OSes to run on the same machine (like Windows & Linux running together). It splits hardware resources (CPU, RAM, disk) between different VMs.
+A hypervisor is software that creates and manages VMs. It sits between the hardware and the VMs, allowing multiple VMs to run on a single physical machine(like Windows & Linux running together). It splits hardware resources (CPU, RAM, disk) between different VMs.
 
-Type1 hypervisor (Bare metal) => Installed directly on hardware (Faster, used in servers)
+Type1 hypervisor (Bare metal) => Installed directly on hardware (no OS in between => Faster, used in servers). E.g. VMware ESXi, Microsoft Hyper-V, Xen, it is more efficient, used in data centers
+
+```scss
+Hardware
+├── Hypervisor (ESXi, Hyper-V)
+    ├── VM 1 (Ubuntu)
+    ├── VM 2 (Windows)
+```
