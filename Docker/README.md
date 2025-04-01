@@ -85,7 +85,13 @@ Now suppose we have 2 diff versions of same service (e.g. mongo) but by default 
 
 **PORT assign** 
 
-```  docker run -d --name mongo1 -p 4000:27017 mongo  ``` 
+``` sh
+docker run -d --name mongo1 -p 4000:27017 mongo
+ ```
+
+``` sh
+docker run -d --name mongo1 -p 5000:27017 mongo
+ ``` 
 ---
 
 
