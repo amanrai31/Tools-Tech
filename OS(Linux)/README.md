@@ -193,3 +193,24 @@ PATH environment variable is location which shell will search for executable pro
 
 #### Hit the link below for BASH Scripting.
 - [Bash scripting](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
+
+
+#### More on kernel
+
+The kernel is the core of an operating system (OS). It manages: 
+- CPU scheduling (allocates processor time).
+- Memory management (handles RAM allocation).
+- Device drivers (communicates with hardware).
+- Process management (manages running applications).
+
+Popular kernels
+
+Linux kernel (used in Ubuntu, Android, )
+Window NT kernel (used in windows OS)
+XNU Kernel (iOS, iPadOS, watchOS, iPhone with modification)
+
+#### Hypervisor
+
+It allows multiple OSes to run on the same machine (like Windows & Linux running together). It splits hardware resources (CPU, RAM, disk) between different VMs.
+
+Type1 hypervisor (Bare metal) => Installed directly on hardware (Faster, used in servers)
