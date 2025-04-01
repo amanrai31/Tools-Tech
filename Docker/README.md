@@ -92,9 +92,29 @@ docker run -d --name mongo1 -p 4000:27017 mongo
 ``` sh
 docker run -d --name mongo2 -p 5000:27017 mongo
  ```
+
 Here mongo1 & mongo2 are container name(2 diff containers) of mongo(of same image)
+
 ---
 
+Docker compose
+
+Commands in CLI can be too long e.g.
+
+```sh
+docker run -d \
+--name mongo-express \
+--net mongo-express \
+-p 8081:8081 \
+-e MONGODB_ADMINUSERNAME = admin \
+-e MONGODB_ADMINPASSWORD = password \
+-e MONGODB_SERVER = mongodb \
+mongo-express
+```
+
+Container for mongo-express application. ( \ - changes line in CLI)
+
+To avoid such complex command - WE have docker compose
 
 
 
