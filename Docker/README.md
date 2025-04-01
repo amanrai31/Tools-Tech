@@ -53,12 +53,33 @@ We can install Linux in docker world instead of installing it in virtualBox; Doc
 
  **Diff b/w docker & VM =>** Docker do not have kernel, it uses host's kernel (VM requires full OS per VM). Docker users container(VM uses virtualized OS). Docker has process level isolation(VM has full OS isolation)
 
+---
 
- 
+From one image we can create multiple containers with diffrenet name. Assign diff port for diff containers.
+When we create/need diff container with same image?
+1. scalabilty & load balancing - When handling high traffic, you run multiple instances of the same service behind a load balancer.
+2. Different Configurations for the Same App(Microservices Architecture) - You can run the same image but with different environment variables or configurations OR with diff role.
 
+```sh
+docker run -d --name frontend-dev -e NODE_ENV=development myfrontend
+docker run -d --name frontend-prod -e NODE_ENV=production myfrontend
+```
+- Both containers use the same image, but one runs in dev mode and the other in production mode.
 
+```sh
+docker run -d --name db-master postgres
+docker run -d --name db-replica1 postgres
+docker run -d --name db-replica2 postgres
+```
 
+- The same PostgreSQL image is used, but each container has a different role.
 
+3. Rolling Updates (Zero Downtime Deployment)
+To update a service without downtime, you create a new container with the updated version before removing the old one.
 
+```sh
+docker run -d --name api-server myapp
+docker run -d --name worker-service myapp
+```
 
 
