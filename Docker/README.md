@@ -29,6 +29,8 @@ DOCKER => 1.installtion, 2. create docker file, 3. create docker image, 4. runni
 
 We can install Linux in docker world instead of installing it in virtualBox; Docker comes with its own virtual env. We can install mongo,redis etc. in docker way so they face same conditions & bugs in local ENV as well as in PROD ENV.
 
+- docker engine => Docker Daemon (dockerd) + Docker CLI (docker) + REST API.
+- docker deamon (dockerd) => listens for Docker API requests and manages containers, images, networks, and volumes.
 - Docker engine APIs => Controls the Docker daemon (dockerd) on your machine. Used to manage containers, images, networks, and volumes programmatically. Supports both REST API & CLI commands
 - Docker Hub APIs => Interacts with Docker Hub (hub.docker.com). Used to search, pull, and manage images on Docker Hub. Requires authentication for private repositories.
 - Registry APIs (Registry is a host that stores repos) => Manages images in a private Docker registry (e.g., Docker hub, AWS ECR, Azure ACR, Harbor, GitHub Container Registry). Used to store and distribute private container images.
