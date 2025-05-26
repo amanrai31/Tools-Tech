@@ -17,7 +17,7 @@ Each service can be deployed, updated, scaled, and monitored independently.
 -----
 
 
-**Also we can deploy all services on a single server** Use Docker Compose to run all services in containers on the same server. => Usefull for small apps, development OR MVP (Simple, fast cheap BUT not ideal of large projects).  (Downs => 1. Can't scale individual services independently. 2. If one service crashes the server, everything may go down.)
+**Also we can deploy all services on a single server =>** Use Docker Compose to run all services in containers on the same server. => Usefull for small apps, development OR MVP (Simple, fast cheap BUT not ideal of large projects).  (Downs => 1. Can't scale individual services independently. 2. If one service crashes the server, everything may go down.)
 
 #### Production-Grade deployment for microservices
 
