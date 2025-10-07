@@ -1,4 +1,8 @@
-# CONTENT => K8S
+# CONTENT => Kubernetes(K8s)
+
+Kubernetes => `Kubernetes = Container Orchestrator`. K8s is basically used to manage containerized apps(Docker images). K8s automatically run, manage, scale, deploy, restart, and monitor. Also K8s is cloud agnostic i.e., cloud independent.
+
+Google's Borg later evolved as K8s, and donated to `CNCF - Could native computing foundation` and made open-source.
 
 #### Cluster info
 
@@ -14,7 +18,7 @@
 - `kubectl get pods -n kube-system`                       => List system pods
 - `kubectl describe pod <pod-name>`                       => Detailed pod info
 - `kubectl logs <pod-name>`                               => Show pod logs
-- `kubectl exec -it <pod-name> -- /bin/bash`              => Open shell inside pod
+- `kubectl exec -it <pod-name> -- /bin/bash`              => Open shell inside a running pod
 - `kubectl delete pod <pod-name>`                         => Delete pod
 
 #### Deployments
@@ -39,3 +43,6 @@
 - `kubectl create ns dev`
 - `kubectl delete ns dev`
 
+
+
+In prod, the control plane usually runs on multiple nodes that span across several data center zones
