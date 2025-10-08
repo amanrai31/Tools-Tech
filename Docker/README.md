@@ -46,7 +46,7 @@ We can install Linux in docker world(inside Docker container) instead of install
 
 - `docker run -it ubuntu` => Here ubuntu is an image. It creates and run a container of Ubuntu image. If image is not present locally then docker will download it from DOCKER-HUB and create/run container. Now, suppose you created 2 containers of Ubuntu => Both containers are isolated just like we have 2 VM having Ubuntu OS.
 
-- `docker ps` => check running containers. `docker ps -a` => Checks all running containers. Here ps is `process status`.
+- `docker ps` => check running containers. `docker ps -a` => Checks all running containers. Here ps is `process status`. (We can use `docker container ls` instead)
 
 - `docker start <container-id>` | `docker stop <container-id>` => We can also use the container name to Start/Stop a container
 
@@ -60,7 +60,9 @@ We can install Linux in docker world(inside Docker container) instead of install
 
  - `docker run -e POSTGRES_PASSWORD=mysecretepassword -d postgres` => To run docker container, the postgres here is image name, we can add version here also.
 
- - `docker run --name <container-name> -e MONGO_PASSWORD=mypassword -d mongo` 
+ - `docker run --name <container-name> -e MONGO_PASSWORD=mypassword -d mongo`
+
+**NOTE :** `docker <object> <action>` => e.g., `docker container ls`, `docker image ls`, `docker network ls`
  
 **Diff b/w docker & VM =>** Docker do not have kernel, it uses host's kernel (VM requires full OS per VM). Docker users container(VM uses virtualized OS). Docker has process level isolation(VM has full OS isolation), Docker encapsulates app instead of whole machine.
 
@@ -230,6 +232,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
