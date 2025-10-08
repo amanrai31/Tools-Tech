@@ -1,7 +1,7 @@
 # CONTENT => Docker
 
 
-Docker is used to containerize apps thus giving them an isolated ENV which is not machine-specific. `Think docker image as CLASS & docker containers as OBJECTS/Runtime Instance`.
+Docker is used to containerize apps thus giving them an isolated ENV which is not machine-specific. `Think docker image as CLASS & docker containers as OBJECTS/Runtime Instance` OR `Think image (as OS) which can be used by many containers (Machines)`.
 
 **NEED =>** Solves the problem of "IT WORKS ON MY MACHINE" by giving the apps an isolated ENV. Docker `Packages our app + environment -> into one portable image`
 
@@ -222,6 +222,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
