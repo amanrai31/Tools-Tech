@@ -4,6 +4,18 @@ Kubernetes => `Kubernetes = Container Orchestrator`. K8s is basically used to ma
 
 Google's Borg later evolved as K8s, and donated to `CNCF - Could native computing foundation` and made open-source.
 
+### K8s cluster has 2 main components =>
+
+1. Control Plane (Master Node), node that runs cluster management components  =>
+- `API Server`              => Entry point, Exposes Kubernetes API
+- `Controller Manager`,     => Ensures desired state
+- `Scheduler`,              => Decides where pods run
+- `etcd (cluster database)` => Stores cluster state
+  
+2. Worker modes (nodes that actually run the pods) => `kubelet`, `kube-proxy`, `CRI => pods(containers)`
+
+**NOTE :** In Small Local Clusters (like Docker Desktop or Minikube) there’s only one node that acts as both: `Control Plane (manages)` AND `Worker Node (runs pods)`
+
 #### Cluster info
 
 - `kubectl cluster-info`
