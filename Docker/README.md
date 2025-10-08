@@ -116,16 +116,16 @@ docker run -d \
 mongo-express
 ```
 
-Container for mongo-express application. ( \ - changes line in CLI)
+Container for mongo-express application. ( \ => changes line in CLI)
 
-To avoid such complex command - WE have docker compose
+To avoid such complex command - WE have Docker Compose
 
-Docker compose is a tool that allow you to define & run multiple docker container as a single application. Instead of running individual ```docker run``` commands for each container, you can manage everything using a single YAML file (docker-compose.yml). Indentation matters in yaml file.
+Docker compose is a tool that allow you to define & run multiple docker container as a single application. Instead of running individual `docker run` commands for each container, you can manage everything using a single YAML file (docker-compose.yml). `Indentation matters in yaml file.`
 
 Instead of manually starting a database, backend, and frontend separately, Docker Compose lets you define everything in one file and launch all services together.
 
-- Run ```docker-compose up``` to start everything || ```docker compose -f <fileName> up```
-- Kill ``` docker compose -f <fileName> down```
+- Run `docker-compose up` to start everything || `docker compose -f <fileName> up`
+- Kill `docker compose -f <fileName> down`
 
 #### Key feature 
 
@@ -133,7 +133,7 @@ Instead of manually starting a database, backend, and frontend separately, Docke
 2. volumes =>  Maps files from the host system into the container.
 3. ports => Exposes container ports to the host. (All services/containers inside a docker-compose is by default on the same network)
 
-**NOTE :** Docker compose is grate for local development, but for production use *Kubernetes* for large scale deployments.
+**NOTE :** Docker Compose is great for local development(Used to run multi-container Docker applications on a single machine), but for production use `Kubernetes` for large-scale deployments(Used to run and manage containerized applications across a cluster of multiple machines (servers or nodes))
 
 
 ```yaml
@@ -172,7 +172,7 @@ Managed by docker, stored in ```/var/lib/docker/volumes/``` - Docker manages vol
 
 Deleting a container does NOT delete the volume, so data persists. A new container using the same volume can access old data.
 
-```bash docker run -d --name mydb -v my_pgdata:/var/lib/postgresql/data postgres ``` => Data stored in my_pgdata(lives on the host machine)
+`bash docker run -d --name mydb -v my_pgdata:/var/lib/postgresql/data postgres` => Data stored in my_pgdata(lives on the host machine)
 
 ---
 
@@ -212,6 +212,7 @@ CMD ["node", "server.js"]
 
 => Learn abot configuration management tools like chef, ansible,puppet - they use config as code but they require knowledge about OS & hardware. What they solve =>
 Diff system config, ; missing files, hardware or other props.
+
 
 
 
