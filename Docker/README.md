@@ -9,6 +9,8 @@ Docker is used to containerize apps thus giving apps an isolated ENV which is no
 
 **Docker container** => Similar to a VM (Just uses the host's kernel & have process-level isolation). You can make as many containers for same image. See image for more clarity (We will discuss later).
 
+Ref vedio => https://www.youtube.com/watch?v=31k6AtW-b3Y&t=2410s
+
 Flags =>
 1. `-d` (--detach) | `-rm` (remove container after it stops) | `-h` (--hostname)
 2. `-e` (--env => environment) | `-v` (Mounts a volume (binds host & container storage)) | `--restart` (Defines the restart policy e.g., always, on-failure)
@@ -226,6 +228,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
