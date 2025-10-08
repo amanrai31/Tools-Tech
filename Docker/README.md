@@ -38,31 +38,31 @@ We can install Linux in docker world(inside Docker container) instead of install
 
 -----
 
-`docker run -it ubuntu` => Here ubuntu is an image. It creates and run a container of Ubuntu image. If image is not present locally then docker will download it from DOCKER-HUB and create/run container. Now, suppose you created 2 containers of Ubuntu => Both containers are isolated just like we have 2 VM having Ubuntu OS 
+### Docker containers & commands related to containers
+
+- `docker run -it ubuntu` => Here ubuntu is an image. It creates and run a container of Ubuntu image. If image is not present locally then docker will download it from DOCKER-HUB and create/run container. Now, suppose you created 2 containers of Ubuntu => Both containers are isolated just like we have 2 VM having Ubuntu OS.
+
+- `docker ps` => check running containers. `docker ps -a` => Checks all running containers. Here ps is `process status`.
+
+- `docker start <container-id>` | `docker stop <container-id>` => We can also use the container name to Start/Stop a container
+
+- `docker stop $(docker ps -a)` => stop all container | `docker container prune` => removes all stopped containers.
+
+**NOTE :** So basically we have `run`, `start`, `stop`
 
  **NOTE :** Docker images are built from multiple read-only layers. Each Dockerfile command (RUN, COPY, etc.) creates a new layer. Layers are cached and reused to speed up builds. The final running container has a writable top layer.
 
- - `docker pull <image-name>` => pulls image
-
- - `docker image ls` => list of images
+ - `docker pull <image-name>` => pulls image | `docker image ls` => list of images
 
  - `docker run -e POSTGRES_PASSWORD=mysecretepassword -d postgres` => To run docker container, the postgres here is image name, we can add version here also.
 
  - `docker run --name <container-name> -e MONGO_PASSWORD=mypassword -d mongo` 
  
- - `docker ps` => check running containers. `docker ps -a` => Checks all running containers. Here ps stands for `process status`, similar to Linux.
-
- `docker start <container-id>` | `docker stop <container-id>` => We can also use the container name to Start/Stop a container
-
- `docker stop $(docker ps -a)` => stop all container
-
- `docker container prune` => removes all stopped containers.
-
- **Diff b/w docker & VM =>** Docker do not have kernel, it uses host's kernel (VM requires full OS per VM). Docker users container(VM uses virtualized OS). Docker has process level isolation(VM has full OS isolation), Docker encapsulates app instead of whole machine.
+**Diff b/w docker & VM =>** Docker do not have kernel, it uses host's kernel (VM requires full OS per VM). Docker users container(VM uses virtualized OS). Docker has process level isolation(VM has full OS isolation), Docker encapsulates app instead of whole machine.
 
 -----
 
-From one image we can create multiple containers with diffrenet name. Assign diff port for diff containers.
+From one image we can create multiple containers with different names. Assign diff port for diff containers.
 When we create/need diff container with same image?
 1. scalabilty & load balancing - When handling high traffic, you run multiple instances of the same service behind a load balancer.
 2. Different Configurations for the Same App(Microservices Architecture) - You can run the same image but with different environment variables or configurations OR with diff role.
@@ -226,6 +226,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
