@@ -9,11 +9,11 @@
 **Think docker image as `class` & docker containers as `objects`**
 
 Flags =>
-1. -d(--detach),-rm (remove container after it stops),-h(--hostname)
-2. -e (--env => environment), -v (Mounts a volume (binds host & container storage)), --restart (Defines the restart policy (e.g., always, on-failure).)
-3. --network(Connects container to a specific network.), -p (	--publish => Maps host port → container port (host:container).), --hostname(	Sets a custom hostname for the container.)
-4. -f (--file => Specifies a custom Dockerfile (docker build).), --pull (	Always pulls the latest base image during build)
-5. -a(-all => Show all containers, even stopped ones.), -q(quiet => Show only container IDs.), --name (Assigns a custom name to the container.)
+1. `-d` (--detach) | `-rm` (remove container after it stops) | `-h` (--hostname)
+2. `-e` (--env => environment) | `-v` (Mounts a volume (binds host & container storage)) | `--restart` (Defines the restart policy e.g., always, on-failure)
+3. `--network` (Connects container to a specific network.) | `-p` (--publish => Maps host port → container port (host:container)) | `--hostname` (Sets a custom hostname for the container.)
+4. `-f` (--file => Specifies a custom Dockerfile (docker build)), `--pull` (	Always pulls the latest base image during build)
+5. `-a` (-all => Show all containers, even stopped ones.), `-q` (quiet => Show only container IDs.), `--name` (Assigns a custom name to the container.)
 
 ---
 
@@ -212,6 +212,7 @@ CMD ["node", "server.js"]
 
 => Learn abot configuration management tools like chef, ansible,puppet - they use config as code but they require knowledge about OS & hardware. What they solve =>
 Diff system config, ; missing files, hardware or other props.
+
 
 
 
