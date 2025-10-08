@@ -1,12 +1,11 @@
-1. Play with public images.
-2. Create docker image for your app.
-3. Lunch DB as docker container & let your container talk to it.
-4. Create microservice container and let them talk to each other.
-5. Run docker container in cloud like AWS/Azure.
+# CONTENT => Docker
 
----
 
-**Think docker image as `class` & docker containers as `objects`**
+Docker is used to containerize apps thus giving them an isolated ENV which is not machine-specific. `Think docker image as CLASS & docker containers as OBJECTS/Runtime Instance`.
+
+**NEED =>** Solves the problem of "IT WORKS ON MY MACHINE" by giving the apps an isolated ENV. Docker `Packages our app + environment -> into one portable image`
+
+Docker image => It is like a snapshot or template that defines what your app and its environment look like. It contains your `app code`, `runtime(node,java etc)`, `Libraries / dependencies`, `Environment variables`, `OS files (like Ubuntu or Alpine base)`.
 
 Flags =>
 1. `-d` (--detach) | `-rm` (remove container after it stops) | `-h` (--hostname)
@@ -98,6 +97,8 @@ docker run -d --name mongo2 -p 5000:27017 mongo
  ```
 
 Here mongo1 & mongo2 are container name(2 diff containers) of mongo(of same image)
+
+`docker run -d -p 8025:8025 -p 1025:1025 mailhog/mailhog` => Suppose an image(app) has multiple ports  
 
 ---
 
@@ -214,6 +215,13 @@ CMD ["node", "server.js"]
 Diff system config, ; missing files, hardware or other props.
 
 
+-----
+
+1. Play with public images.
+2. Create docker image for your app.
+3. Lunch DB as docker container & let your container talk to it.
+4. Create microservice container and let them talk to each other.
+5. Run docker container in cloud like AWS/Azure.
 
 
 
