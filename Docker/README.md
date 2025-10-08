@@ -11,14 +11,16 @@ Docker is used to containerize apps thus giving apps an isolated ENV which is no
 
 Ref vedio => https://www.youtube.com/watch?v=31k6AtW-b3Y&t=2410s
 
-Flags =>
-1. `-d` (--detach) | `-rm` (remove container after it stops) | `-h` (--hostname)
-2. `-e` (--env => environment) | `-v` (Mounts a volume (binds host & container storage)) | `--restart` (Defines the restart policy e.g., always, on-failure)
-3. `--network` (Connects container to a specific network.) | `-p` (--publish => Maps host port → container port (host:container)) | `--hostname` (Sets a custom hostname for the container.)
-4. `-f` (--file => Specifies a custom Dockerfile (docker build)) | `--pull` (	Always pulls the latest base image during build)
-5. `-a` (-all => Show all containers, even stopped ones.) | `-q` (quiet => Show only container IDs.) | `--name` (Assigns a custom name to the container.)
+-----
 
----
+Flags =>
+1. `-d` detach mode | `-it` interactive terminal |  `-rm` remove container after it stops | `-h` hostname
+2. `-e` environment | `-v` Mounts a volume (binds host & container storage) | `--restart` Defines the restart policy e.g., always, on-failure
+3. `--network` (Connects container to a specific network.) | `-p` Maps host port → container port (host: container) | `--hostname` Sets a custom hostname for the container
+4. `-f`  Specifies a custom Dockerfile (docker build) | `--pull` Always pulls the latest base image during build
+5. `-a`  Show all containers, even stopped ones | `-q` quiet => Show only container IDs | `--name` Assigns a custom name to the container
+
+-----
 
 DOCKER => 1. installation, 2. create Docker file, 3. create Docker image, 4. running containers, 5. pre-defined images, 6. Docker Hub, 7. Docker volume & network, 8. Docker compose.
 
@@ -228,6 +230,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
