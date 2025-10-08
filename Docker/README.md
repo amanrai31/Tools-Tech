@@ -1,11 +1,13 @@
 # CONTENT => Docker
 
 
-Docker is used to containerize apps thus giving them an isolated ENV which is not machine-specific. `Think docker image as CLASS & docker containers as OBJECTS/Runtime Instance` OR `Think image (as OS) which can be used by many containers (Machines)`.
+Docker is used to containerize apps thus giving appa an isolated ENV which is not machine-specific. `Think docker image as CLASS & docker containers as OBJECTS/Runtime Instance` OR `Think image (as OS) which can be used by many containers (Machines)`.
 
 **NEED =>** Solves the problem of "IT WORKS ON MY MACHINE" by giving the apps an isolated ENV. Docker `Packages our app + environment -> into one portable image`
 
-Docker image => It is like a snapshot or template that defines what your app and its environment look like. It contains your `app code`, `runtime(node,java etc)`, `Libraries / dependencies`, `Environment variables`, `OS files (like Ubuntu or Alpine base)`.
+**Docker image** => It is like a snapshot or template that defines what your app and its environment look like. It contains your `app code`, `runtime(node,java etc)`, `Libraries / dependencies`, `Environment variables`, `OS files (like Ubuntu or Alpine base)`.
+
+**Docker container** => Similar to a VM (Just uses the host's kernel & have process-level isolation). You can make as many containers for same image. See image for more clarity (We will discuss later).
 
 Flags =>
 1. `-d` (--detach) | `-rm` (remove container after it stops) | `-h` (--hostname)
@@ -16,25 +18,25 @@ Flags =>
 
 ---
 
-DOCKER => 1.installtion, 2. create docker file, 3. create docker image, 4. running containers, 5.pre-defined images, 6. docker hub, 7. docker volume & network, 8. Docker compose.
+DOCKER => 1. installation, 2. create Docker file, 3. create Docker image, 4. running containers, 5. pre-defined images, 6. Docker Hub, 7. Docker volume & network, 8. Docker compose.
 
 1. Installation
 
-- install docker engine (local)
-- install docker desktop (local)
-- Docker Hub - (remote access => push your images here)
+- install Docker Engine (Dockerd + CLI + API)        (local)
+- install Docker Desktop GUI                         (local)
+- Docker Hub                                         (remote access => push your images here)
 
 ```bash sudo apt install ./docker-desktop-amd64.deb``` => installs both Docker engine & Docker desktop
 
-We can install Linux in docker world instead of installing it in virtualBox; Docker comes with its own virtual env. We can install mongo,redis etc. in docker way so they face same conditions & bugs in local ENV as well as in PROD ENV.
+We can install Linux in docker world(inside Docker container) instead of installing it in virtualBox; Docker comes with its own virtual env. We can install mongo,redis etc. in docker way so they face same conditions & bugs in local ENV as well as in PROD ENV.
 
-- docker engine => Docker Daemon (dockerd) + Docker CLI (docker) + REST API.
-- docker deamon (dockerd) => listens for Docker API requests and manages containers, images, networks, and volumes.
-- Docker engine APIs => Controls the Docker daemon (dockerd) on your machine. Used to manage containers, images, networks, and volumes programmatically. Supports both REST API & CLI commands
-- Docker Hub APIs => Interacts with Docker Hub (hub.docker.com). Used to search, pull, and manage images on Docker Hub. Requires authentication for private repositories.
-- Registry APIs (Registry is a host that stores repos) => Manages images in a private Docker registry (e.g., Docker hub, AWS ECR, Azure ACR, Harbor, GitHub Container Registry). Used to store and distribute private container images.
+- `docker engine` => `Docker Daemon (dockerd)` + `Docker CLI (docker)` + `REST API`.
+- `Docker daemon (dockerd)` => listens for Docker API requests and manages containers, images, networks, and volumes.
+- `Docker engine APIs` => Controls the Docker daemon (dockerd) on your machine. Supports both REST API & CLI commands
+- `Docker Hub APIs` => Interacts with Docker Hub (hub.docker.com). Used to search, pull, and manage images on Docker Hub. Requires authentication for private repositories.
+- `Registry APIs` => Registry is a host that stores repos => Manages images in a private Docker registry (e.g., Docker hub, AWS ECR, Azure ACR, Harbor, GitHub Container Registry). Used to store and distribute private container images.
 
----
+-----
 
  **NOTE :** Docker images are built from multiple read-only layers. Each Dockerfile command (RUN, COPY, etc.) creates a new layer. Layers are cached and reused to speed up builds. The final running container has a writable top layer.
 
@@ -222,6 +224,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
