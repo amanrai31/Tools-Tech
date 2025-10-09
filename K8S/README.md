@@ -2,6 +2,8 @@
 
 Kubernetes => `Kubernetes = Container Orchestrator`. K8s is basically used to manage containerized apps(Docker images). K8s automatically run, manage, scale, deploy, restart, and monitor. Also K8s is cloud agnostic i.e., cloud independent.
 
+`In local/DEV ENV docker-compose manage the container, in PROD k8s manages the containers`. Docker-compose can not scale containers, can not auto-heal on crash, can not load-alance traffic, can not update without downtime(rolling updates). This is where K8s comes.
+
 Google's Borg later evolved as K8s, and donated to `CNCF - Could native computing foundation` and made open-source.
 
 ### K8s cluster has 2 main components =>
