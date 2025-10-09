@@ -44,7 +44,7 @@ We can install Linux in docker world(inside Docker container) instead of install
 
 ### Docker containers & commands related to containers
 
-- `docker run -it ubuntu` => Here ubuntu is an image. It creates and run a container of Ubuntu image. If image is not present locally then docker will download it from DOCKER-HUB and create/run container. Now, suppose you created 2 containers of Ubuntu => Both containers are isolated just like we have 2 VM having Ubuntu OS.
+- `docker run -it ubuntu` => Here ubuntu is an image. It creates(new) and run a container of Ubuntu image. If image is not present locally then docker will download it from DOCKER-HUB and create/run container. Now, suppose you created 2 containers of Ubuntu => Both containers are isolated just like we have 2 VM having Ubuntu OS.
 
 - `docker ps` => check running containers. `docker ps -a` => Checks all running containers. Here ps is `process status`. (We can use `docker container ls` instead)
 
@@ -232,6 +232,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
