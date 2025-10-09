@@ -52,7 +52,7 @@ We can install Linux in docker world(inside Docker container) instead of install
 
 - `docker stop $(docker ps -a)` => stop all container | `docker container prune` => removes all stopped containers.
 
-**NOTE :** So basically we have `run`, `start`, `stop`
+**NOTE :** So basically we have `run`, `start`, `stop` and a bunch of flags for various purposes 
 
  **NOTE :** Docker images are built from multiple read-only layers. Each Dockerfile command (RUN, COPY, etc.) creates a new layer. Layers are cached and reused to speed up builds. The final running container has a writable top layer.
 
@@ -232,6 +232,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
