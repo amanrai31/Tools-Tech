@@ -30,7 +30,7 @@ DOCKER => 1. installation, 2. create Docker file, 3. create Docker image, 4. run
 - install Docker Desktop GUI                         (local)
 - Docker Hub                                         (remote access => push your images here)
 
-```bash sudo apt install ./docker-desktop-amd64.deb``` => installs both Docker engine & Docker desktop
+```bash sudo apt install ./docker-desktop-amd64.deb``` => installs both Docker engine & Docker desktop GUI
 
 We can install Linux in docker world(inside Docker container) instead of installing it in virtualBox; Docker comes with its own virtual env. We can install mongo,redis etc. in docker way so they face same conditions & bugs in local ENV as well as in PROD ENV.
 
@@ -232,6 +232,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
