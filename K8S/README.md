@@ -10,8 +10,8 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 
 1. Control Plane (Master Node), node that runs cluster management components  =>
 - `API Server`              => Entry point, Exposes Kubernetes API
-- `Controller Manager`,     => Ensures desired state
-- `Scheduler`,              => Decides where pods run
+- `Controller Manager`      => Ensures desired state
+- `Scheduler`               => Decides where pods run
 - `etcd (cluster database)` => Stores cluster state
   
 2. Worker modes (nodes that actually run the pods) => `kubelet`, `kube-proxy`, `CRI => pods(containers)`
