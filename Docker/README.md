@@ -11,6 +11,8 @@ Docker is used to containerize apps thus giving apps an isolated ENV which is no
 
 Ref vedio => https://www.youtube.com/watch?v=31k6AtW-b3Y&t=2410s
 
+**NOTE :** `docker <object> <action>` => e.g., `docker container ls`, `docker image ls`, `docker network ls`
+
 -----
 
 Flags =>
@@ -62,7 +64,6 @@ We can install Linux in docker world(inside Docker container) instead of install
 
  - `docker run --name <container-name> -e MONGO_PASSWORD=mypassword -d mongo`
 
-**NOTE :** `docker <object> <action>` => e.g., `docker container ls`, `docker image ls`, `docker network ls`
  
 **Diff b/w docker & VM =>** Docker do not have kernel, it uses host's kernel (VM requires full OS per VM). Docker users container(VM uses virtualized OS). Docker has process level isolation(VM has full OS isolation), Docker encapsulates app instead of whole machine.
 
@@ -232,6 +233,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
