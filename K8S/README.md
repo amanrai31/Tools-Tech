@@ -1,20 +1,23 @@
 # CONTENT => Kubernetes(K8s)
 
-Kubernetes => `Kubernetes = Container Orchestrator`. K8s is basically used to manage containerized apps(Docker images). K8s automatically `run`, `manage`, `scale`, `deploy`, `restart`, and `monitor`. Also K8s is cloud agnostic i.e., cloud independent.
+Kubernetes => `Kubernetes = Container Orchestrator`. K8s is basically used to manage containerized apps(Docker images). K8s automatically `run`, `manage`, `scale`, `0-time deploy`, `restart`, and `monitor`. Also K8s is cloud agnostic i.e., cloud independent.
 
 `In local/DEV ENV docker-compose manage the container, in PROD k8s manages the containers`. Docker-compose can not scale containers, can not auto-heal on crash, can not load-balance traffic, can not update without downtime(rolling updates). This is where K8s comes.
 
 Google's Borg later evolved as K8s, and donated to `CNCF - Could native computing foundation` and made open-source.
 
-### K8s cluster has 2 main components =>
+### K8s cluster is made up of Master node & Worker node(s) =>
 
 1. Control Plane (Master Node), node that runs cluster management components  =>
-- `API Server`              => Entry point, Exposes Kubernetes API
-- `Controller Manager`      => Ensures desired state
-- `Scheduler`               => Decides where pods run
-- `etcd (cluster database)` => Stores cluster state
+- `API Server`(kubectl)     => Entry point, Exposes Kubernetes API
+- `Controller Manager`      => Ensures desired state, manage state of cluster
+- `Scheduler`               => Decides where pods run, assigns node to newly created pods
+- `etcd (cluster database)` => key-value store, has all cluster data
   
-2. Worker modes (nodes that actually run the pods) => `kubelet`, `kube-proxy`, `CRI => pods(containers)`
+2. Worker mode(s) (nodes that actually run the pods) =>
+- `kubelet`                 => Agent, make sure container is running in pod
+- `kube-proxy`              => Maintain n/w rule for comm with pods within the node & outside the node
+- `CRI - Container runtime` => Runs pods(containers)
 
 **NOTE :** In Small Local Clusters (like Docker Desktop or Minikube) there’s only one node that acts as both: `Control Plane (manages)` AND `Worker Node (runs pods)`
 
