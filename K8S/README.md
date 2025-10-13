@@ -20,6 +20,7 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 - `CRI - Container runtime` => Runs pods(containers)
 
 **NOTE :** In Small Local Clusters (like Docker Desktop or Minikube) there’s only one node that acts as both: `Control Plane (manages)` AND `Worker Node (runs pods)`
+**NOTE :** Each pod has it's own IP.
 
 #### Cluster info
 
