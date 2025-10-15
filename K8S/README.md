@@ -17,7 +17,7 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 2. Worker mode(s) (nodes that actually run the pods) They are separate Linux or VM=>
 - `kubelet`                 => Agent, which listens to KUBE-API and does as commanded (deploy OR destroy pods/containers)
 - `kube-proxy`              => Allow services to talk to other containers in other pod or in other node.
-- `CRI - Container runtime` => Runs pods(containers)
+- `CRI - Container runtime` => Runs pods (usually one container per pod)
 
 **NOTE :** In Small Local Clusters (like Docker Desktop or Minikube) there’s only one node that acts as both: `Control Plane (manages)` AND `Worker Node (runs pods)`
 **NOTE :** Each pod has it's own IP.
