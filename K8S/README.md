@@ -8,15 +8,15 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 
 ### K8s cluster is made up of Master node & Worker node(s) =>
 
-1. Control Plane (Master Node), node that runs cluster management components  =>
+1. Control Plane (Master Node), node that runs cluster management components (Inside a linux machine or inside VM) =>
 - `API Server`(kubectl)     => Entry point, Exposes Kubernetes API
-- `Controller Manager`      => Ensures desired state, manage state of cluster
+- `Controller Manager`      => Ensures desired state, manages state of cluster
 - `Scheduler`               => Decides where pods run, assigns node to newly created pods
 - `etcd (cluster database)` => key-value store, has all cluster data
   
-2. Worker mode(s) (nodes that actually run the pods) =>
-- `kubelet`                 => Agent, make sure container is running in pod
-- `kube-proxy`              => Maintain n/w rule for comm with pods within the node & outside the node
+2. Worker mode(s) (nodes that actually run the pods) They are separate Linux or VM=>
+- `kubelet`                 => Agent, which listens to KUBE-API and does as commanded (deploy OR destroy pods/containers)
+- `kube-proxy`              => Allow services to talk to other containers in other pod or in other node.
 - `CRI - Container runtime` => Runs pods(containers)
 
 **NOTE :** In Small Local Clusters (like Docker Desktop or Minikube) there’s only one node that acts as both: `Control Plane (manages)` AND `Worker Node (runs pods)`
