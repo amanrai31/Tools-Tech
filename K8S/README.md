@@ -65,4 +65,4 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 
 
 
-In prod, the control plane usually runs on multiple nodes that span across several data center zones
+In prod, the masterNode & workerNode usually runs on multiple nodes that span across several data center zones
