@@ -1,6 +1,8 @@
 # CONTENT => Kubernetes(K8s)
 
-Resource => https://www.youtube.com/watch?v=r2zuL9MW6wc&t=529s
+### Resource 
+- K8S Fundamental - https://www.youtube.com/watch?v=r2zuL9MW6wc&t=529s
+- K8s N/W - https://opensource.com/article/22/6/kubernetes-networking-fundamentals
 
 Kubernetes => `Kubernetes = Container Orchestrator`. K8s is basically used to manage containerized apps(Docker images). K8s automatically `run`, `manage`, `scale`, `0-time deploy`, `restart`, and `monitor`. Also K8s is cloud agnostic i.e., cloud independent.
 
@@ -73,8 +75,7 @@ In prod, the masterNode & workerNode usually runs on multiple nodes that span ac
 ## HandsOn
 
 - Containerize your app (Make Dockerfile - Declare all steps to build image)
-- build image `docker build -t <tagname:version>`
-- Push to dockerHub
+- build image `docker build -t <tagname:version>` | Push to dockerHub (Not required if you just want to keep it local)
 - Now deploy app on k8s cluster using `k8s deployment` - Create `deployment object in .yaml file` 
 - the yaml file has all `desired state/manifest` for your app and the app's image e.g => `nginx-deployment.yaml`
   
