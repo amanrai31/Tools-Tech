@@ -76,7 +76,7 @@ In prod, the masterNode & workerNode usually runs on multiple nodes that span ac
 - build image `docker build -t <tagname:version>`
 - Push to dockerHub
 - Now deploy app on k8s cluster using `k8s deployment` - Create `deployment object in .yaml file` 
-- the yaml file has all `desired state` for your app and the app's image
+- the yaml file has all `desired state/manifest` for your app and the app's image e.g => `nginx-deployment.yaml`
   
 ```yaml
 apiVersion: apps/v1
@@ -102,3 +102,9 @@ spec:
         - containerPort: 80
 
 ```
+
+- `kubectl apply -f nginx-deployment.yaml`
+- `kubectl get pods -A` - will have 3 pods of nginx now
+- Also check - `kubectl get deployments --all-namespaces`
+- If you want to run 6 replicas/pods of nginx then edit the nginx-deployment.yaml `sudo vi nginx-deployment.yaml` and declare your desired state. Run the apply command
+- Suppose you have FE and BE running in diff containers (they may be on diff pods/nodes too) - we can expose it to LB via a `K8S service`
