@@ -188,7 +188,7 @@ Deleting a container does NOT delete the volume, so data persists. A new contain
 
 ---
 
-#### Docker file
+### Docker file
 
 A Dockerfile is a script containing instructions to build a Docker image (defines how a container should create, what dependencies to install,what command to run when container starts etc). It is used to create custom images.
 
@@ -233,6 +233,7 @@ Diff system config, ; missing files, hardware or other props.
 3. Lunch DB as docker container & let your container talk to it.
 4. Create microservice container and let them talk to each other.
 5. Run docker container in cloud like AWS/Azure.
+
 
 
 
