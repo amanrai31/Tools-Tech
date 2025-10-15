@@ -11,13 +11,13 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 ### K8s cluster is made up of Master node & Worker node(s) =>
 
 1. Control Plane (Master Node), node that runs cluster management components (Inside a linux machine or inside VM) =>
-- `API Server`(kubectl)     => Entry point, Exposes Kubernetes API
+- `API Server`(kubectl)     => Entry point for any comm with K8S Cluster, Exposes Kubernetes API
 - `Controller Manager`      => Ensures desired state, manages state of cluster
 - `Scheduler`               => Decides where pods run, assigns node to newly created pods
 - `etcd (cluster database)` => key-value store, has all cluster data
   
 2. Worker mode(s) (nodes that actually run the pods) They are separate Linux or VM=>
-- `kubelet`                 => Agent, which listens to KUBE-API and does as commanded (deploy OR destroy pods/containers)
+- `kubelet`                 => Agent, which listens to KUBE-API and does as commanded (deploy OR destroy pods/containers etc.)
 - `kube-proxy`              => Allow services to talk to other containers in other pod or in other node.
 - `CRI - Container runtime` => Runs pods (usually one container per pod)
 
@@ -35,8 +35,8 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 #### Pods
 
 - `kubectl get pods`                                      => List all pods
-- `kubectl get pods -n kube-system`                       => List system pods
-- `kubectl describe pod <pod-name>`                       => Detailed pod info
+- `kubectl get pods -n <nameSpace>`                       => List system pods
+- `kubectl describe pod <pod-name>`                       => Detailed pod info `(add nameSpace too)`
 - `kubectl logs <pod-name>`                               => Show pod logs
 - `kubectl exec -it <pod-name> -- /bin/bash`              => Open shell inside a running pod
 - `kubectl delete pod <pod-name>`                         => Delete pod
@@ -65,4 +65,40 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 
 
 
-In prod, the masterNode & workerNode usually runs on multiple nodes that span across several data center zones
+In prod, the masterNode & workerNode usually runs on multiple nodes that span across several data center zones.
+
+
+------
+
+## HandsOn
+
+- Containerize your app (Make Dockerfile - Declare all steps to build image)
+- build image `docker build -t <tagname:version>`
+- Push to dockerHub
+- Now deploy app on k8s cluster using `k8s deployment` - Create `deployment object in .yaml file` 
+- the yaml file has all `desired state` for your app and the app's image
+  
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+```
