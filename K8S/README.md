@@ -24,7 +24,32 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 - `CRI - Container runtime` => Runs pods (usually one container per pod)
 
 **NOTE :** In Small Local Clusters (like Docker Desktop or Minikube) there’s only one node that acts as both: `Control Plane (manages)` AND `Worker Node (runs pods)`
+
 **NOTE :** Each pod has it's own IP.
+
+-----
+
+### K8s resorces
+
+1. Workload Resources => These define how your applications run on the cluster.
+- `pod`, `replicaSet`, `deployment`, `stateful`, `job`, `cronjob`
+
+2. Service & Networking Resources => These define how your app communicates inside and outside the cluster.
+- `service`, `ingress`, `endpoint`, `networkPolicy`
+
+3. Configuration & Storage Resources => These define how your app is configured and stores data.
+- `ConfigMap`, `Secret`, `PersistentVolume- Represents physical storage in the cluster.`, `PersistentVolumeClaim - A request by a user for storage (binds to a PV)`, `StorageClass`
+
+4. Cluster-Level Resources => These manage cluster-wide settings, roles, and access control.
+- `namespace - logical partition inside a cluster to isolate resources`, `node - physical or virtual machine in cluster`, `role`, `roleBinding`, `ServiceAccount`
+
+
+
+#### General syntax 
+
+- `kubectl get <resourceName> -n <namespace>`     => Any any resource in a namespace
+- `kubectl get <resourceName> --all-namespaces`   => Get resource across all namespaces
+- `kubectl describe <resource> <resourceName>`    => describe a resource 
 
 #### Cluster info
 
@@ -32,8 +57,7 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 - `kubectl get nodes`
 - `kubectl describe node <node-name>`
 - `kubectl get all` 
-
-  
+ 
 #### Pods
 
 - `kubectl get pods`                                      => List all pods
