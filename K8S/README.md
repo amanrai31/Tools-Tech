@@ -47,9 +47,9 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 
 #### General syntax 
 
-- `kubectl get <resourceName> -n <namespace>`     => Any any resource in a namespace
-- `kubectl get <resourceName> --all-namespaces`   => Get resource across all namespaces
-- `kubectl describe <resource> <resourceName>`    => describe a resource 
+- `kubectl get <resourceName> -n <namespace>`                    => Any any resource in a namespace
+- `kubectl get <resourceName> --all-namespaces`                  => Get resource across all namespaces
+- `kubectl describe <resource> <resourceName> -n <namespace>`    => describe a resource 
 
 #### Cluster info
 
@@ -60,17 +60,13 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
  
 #### Pods
 
-- `kubectl get pods`                                      => List all pods
-- `kubectl get pods -n <nameSpace>`                       => List system pods
-- `kubectl describe pod <pod-name>`                       => Detailed pod info `(add nameSpace too)`
 - `kubectl logs <pod-name>`                               => Show pod logs
 - `kubectl exec -it <pod-name> -- /bin/bash`              => Open shell inside a running pod
 - `kubectl delete pod <pod-name>`                         => Delete pod
 
 #### Deployments
 
-- `kubectl get deployments`
-- `kubectl describe deployment <name>`
+- `kubectl get deployments` | `kubectl describe deployment <name>`
 - `kubectl rollout status deployment/<name>`
 - `kubectl rollout undo deployment/<name>`
 - `kubectl apply -f deployment.yaml`                     => Create from yaml
@@ -78,8 +74,7 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 
 #### Services
 
-- `kubectl get svc`
-- `kubectl describe svc <name>`
+- `kubectl get svc` |  `kubectl describe svc <name>`
 - `kubectl port-forward svc/<service-name> 8080:80`
 - `kubectl delete svc <name>`
 
@@ -90,9 +85,7 @@ Google's Borg later evolved as K8s, and donated to `CNCF - Could native computin
 - `kubectl delete ns dev`
 
 
-
 In prod, the masterNode & workerNode usually runs on multiple nodes that span across several data center zones.
-
 
 ------
 
