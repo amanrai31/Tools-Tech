@@ -41,4 +41,5 @@ WHERE status = 'open';
 
 - `findMany`, `findOne` (LIMIT 1), `findUnique`
 
-### 
+### Prisma `create` = SQL `INSERT`
+
