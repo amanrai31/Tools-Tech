@@ -93,7 +93,7 @@ Post.find().populate("user");
 - Without populate - Post.find(); =>  {"title": "Mongo Basics", "user": "user456"}
 - With Populate - Post.find().populate("user"); => {"title": "Mongo Basics", "user":{ "_id": "user456", "name": "Aman" }}
 
-**NOTE :** We have 
+**NOTE :** We have `Multiple Populates` & `Nested Populates`
 
 ## Validation
 
