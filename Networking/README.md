@@ -1,5 +1,5 @@
 # HOST, IP AND NETWORK
-***Host -*** Any device which sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers]. Or in more simple terms any device which is connected to internet is a host.
+***Host -*** Any device which sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers]. Or in more simple terms - any device which is connected to internet is a host.
 
 HOST is divided in 2 main categories - Client OR Server.
 
@@ -30,6 +30,7 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 
 - [Resource](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+
 
 
 
