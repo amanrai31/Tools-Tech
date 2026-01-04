@@ -1,11 +1,13 @@
 # HOST, IP AND NETWORK
-***Host -*** Any device which sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers].
+***Host -*** Any device which sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers]. Or in more simple terms any device which is connected to internet is a host.
+
+HOST is divided in 2 main categories - Client OR Server.
 
 ***Client -***  Device that intiates request.
 
 ***Server -***  Device that responds.
 
-- ***Note -*** Client and server are relative terms depends on specific communication.
+- ***Note -*** Client and server are relative terms depends on specific communication. If the backend server made a request to database server, then the backend server is client here.
 
 Every host on the internet has IP address. IP is unique identifier for each host on n/w.
 
@@ -28,5 +30,6 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 
 - [Resource](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+
 
 
