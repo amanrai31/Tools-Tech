@@ -22,7 +22,7 @@ Before n/w transferring data required portable media (Disk, CD, penDrives etc)
 We can have nested networks (Subnet)
 E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] have own n/w.
 - [Subnet](https://github.com/user-attachments/assets/89c79be0-6037-4d3f-bdbd-d56c9f6e96bf)
-- 
+
 ---
 
 # [Switch, Router] & [Repeater,Hub and Bridge]
@@ -33,6 +33,7 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 
 - [Resource](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+
 
 
 
