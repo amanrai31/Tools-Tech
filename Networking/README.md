@@ -7,11 +7,11 @@ HOST is divided in 2 main categories - Client OR Server.
 
 ***Server -***  Device that responds.
 
-- ***Note -*** Client and server are relative terms depends on specific communication. If the backend server made a request to database server, then the backend server is client here.
+- ***Note -*** Client and server are relative terms depend on specific communication. If the backend server made a request to database server, then the backend server is client here.
 
-Every host on the internet has IP address. **IP is unique identifier for each host on n/w.**
+Every host on the internet has IP address. **IP is the  identity for each host on n/w.**
 
-IP Address- 32 bits `01000101001010100011100010100101`, Containing 4 chunks `01000101`, `00101010`, `00111000`, `10100101` => `69`.`42`.`56`.`165`. Each with range 0-255 as 8bit min_value=0 & max_value=255
+IP Address- 32 bits `01000101001010100011100010100101`, Containing 4 chunks `01000101`, `00101010`, `00111000`, `10100101` => `69`.`42`.`56`.`165`. Each with range 0-255 as 8bit min_value=0 & max_value=255. When a data packet is send OR recived, it has the source & destination IPs both.
 
 ***Network(n/w) -*** Host are connected to each other through n/w. Logical grouping of hosts.
 
@@ -25,11 +25,12 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 # [Switch, Router] & [Repeater,Hub and Bridge]
 
 ***Repeaters -*** It regenrates signals, NEED- allowing comm. across long distances.
-***Hub -*** It is multi-port repeter. NEED- Connecting hosts directly to each other does not scale, hub gives a centalise space for hosts to connect.
+***Hub -*** It is a multi-port repeater. NEED- Connecting hosts directly to each other does not scale, hub gives a centralized space for hosts to connect.
 
 
 
 - [Resource](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+
 
 
 
