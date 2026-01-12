@@ -24,7 +24,7 @@ IP Addr is 32 bits `01000101001010100011100010100101`, Containing 4 chunks `0100
 
 ## Network(n/w) 
 
-Host are connected to each other through n/w. Logical grouping of hosts that require similar connectivity. **Internet is just newtwork of networks**
+Host are connected to each other through n/w. Logical grouping of hosts that require similar connectivity. **Internet is just newtwork of networks(Bunch of interconnected n/w)**
 
 **NOTE :** Before NETWORK transferring data literally required portable media (Disk, CD, penDrives etc)
 
@@ -40,6 +40,7 @@ E.g. => An org > 3 diff offices at diff location > diff teams[hr, dev, finance] 
 
 ***Repeaters -*** It regenrates signals, NEED- allowing comm. across long distances.
 ***Hub -*** It is a multi-port repeater. NEED- Connecting hosts directly to each other does not scale, hub gives a centralized space for hosts to connect.
+
 
 
 
