@@ -26,4 +26,4 @@ Here is same MAC addr which is displayed in 2 diff ways => 94-65-9C-3B-8A-E5(Win
 
 Addressing Scheme - IP addresses(32 bits). L3 Technologies: Routers, Hosts(Anything with an IP)
 
-**NOTE :** Both IP & MAC addresses servers diff purposes, but together Layer2(Data Link) & Layer3(Network) is combinely called - **ARP(Address Resolution Protocol)**
+**NOTE :** Both IP & MAC addresses servers diff purposes, but they work together to move data across internet so Layer2(Data Link) & Layer3(Network) is combinely called - **ARP(Address Resolution Protocol)**
