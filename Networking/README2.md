@@ -4,7 +4,7 @@
 
 **Host must follow a set of rules like any language has some set of rules while communicating**
 
-Like Human body is made up of various systems (Skeletal, Respiratory, Nervous, Cardiovascular, Muscular etc.), similarly OSI model divides rules of networking into 7 layers(if all layers are functioning, host can share data)
+Like Human body is made up of various systems (Skeletal, Respiratory, Nervous, Cardiovascular, Muscular etc.), similarly OSI model divides rules of networking into 7 **LAYERS** (if all layers are functioning, host can share data)
 
 ### 1. Physical Layer (Transporting bits)
 
@@ -26,4 +26,4 @@ Here is same MAC addr which is displayed in 2 diff ways => 94-65-9C-3B-8A-E5(Win
 
 Addressing Scheme - IP addresses(32 bits). L3 Technologies: Routers, Hosts(Anything with an IP)
 
-**NOTE :** Both IP & MAC addresses servers diff purposes, but they work together to move data across internet so Layer2(Data Link) & Layer3(Network) is combinely called - **ARP(Address Resolution Protocol)**
+**NOTE :** Both IP & MAC addresses servers diff purposes, but they work together to move data across internet so L2(Data Link) & L3(Network) is combinely called - **ARP(Address Resolution Protocol)**
