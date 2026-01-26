@@ -8,4 +8,15 @@ This lesson will illustrate two scenarios
 ### Host A & B are directly connected
 
 - Both hosts have NIC so a MAC Address
-- Both hosts are configured with an IP address
+- Both hosts are configured with an IP address && Subnet Mask(Size of a subnet network)
+
+- Host A has some data to send to HOST B
+- HOST A knows the IP address of HOST B (ping 10.1.1.2)
+- HOST A knows 10.1.1.2 is in its own IP Network (HOST A can determin this by looking at it's own IP & Subnet Mask)
+- Host A can create the L3 header to attach to data
+- HOST A does not know HOST B's MAC Address
+
+- HOST A uses ARP to resolve target's MAC Address - ARP request ask for MAC address associated with target IP(ARP request includes sender's MAC address & sender's IP, ARP request is a Broadcast i.e. it is send to everyone on network, to deliver packet to every MAC addr ffff.ffff.ffff is used as default MAC)
+
+- ARP Mapping are stored in an ARP cache (Reciver learns(make this cache) from sender's ARP request which had sender's IP & MAC)
+
