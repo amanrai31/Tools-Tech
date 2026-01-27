@@ -18,7 +18,7 @@ This lesson will illustrate two scenarios
 
 - HOST A uses ARP(ADDRESS RESOLUTION PROTOCOL) to resolve target's MAC Address - ARP request ask for MAC address associated with target IP(ARP request includes sender's MAC address & sender's IP, ARP request is a Broadcast i.e. it is send to everyone on network || to deliver packet to every MAC addr ffff.ffff.ffff is used as default MAC)
 
-- ARP Mapping are stored in an ARP cache (Receiver learns(make this cache) from sender's ARP request which had sender's IP & MAC)
+- ARP Mapping are stored in an **ARP cache** (Receiver learns(make this cache) from sender's ARP request which had sender's IP & MAC)
 
 - HostB responds by sending an ARP response(Unicast i.e. directly to HostA). HostA populates it's ARP cache with HostB IP/MAC mapping
 
@@ -26,11 +26,28 @@ This lesson will illustrate two scenarios
 
 - If HostB has to communicate than HostB's ARP cache is already populated so HostB can directly send response to HostA
 
-### 2. Host A & B are connected on Internet
+**NOTE :** Anything having IP has an **ARP Cache**
 
+### 2. Host A & C are connected on Internet (HostA-----Router-----HostB)
 
+- HostA, HostC, and the Router have MAC and IP addresses
+- HostA has some data to send to HostC, HostA   knows the IP of HostC(Provided by user or Application)
+- HostA knows that HostC's IP address is on foreign network(By looking at it's own IP and Subnet mask)
+- HostA create a L3 header(End2End), HostA needs to create a L2 header(Hop2Hop & next Hop is router)
+- Router's IP addr is configured in HostA as default gateway (So using ARP, HostA have to find MAC of Router)
 
+**NOTE:** When you connect to internet, 3 things are configured, 1. IP Addr || 2. Subnet Mask || 3. Default Gateway
 
+- HostA shoot a brodcast, & when response come from Router then HostA make it's ARP cache mapping. Now HostA have L2 Headers too.
+
+- Now data is sent by HostA to Router. Now router discard L2 layer and router add new L2(Hop to Hop) Layer
+
+-----
+
+HostA first step when sending data is always the same. So it determines if target IP is on **Local** or **Foreign**
+
+- Foreign - ARP for a Deafault Gateway
+- Local - ARP for Target IP directly
 
 
 
