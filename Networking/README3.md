@@ -42,12 +42,15 @@ This lesson will illustrate two scenarios
 
 - Now data is sent by HostA to Router. Now router discard L2 layer and router add new L2(Hop to Hop) Layer
 
------
 
-HostA first step when sending data is always the same. So it determines if target IP is on **Local** or **Foreign**
+#### HostA first step when sending data is always the same. So it determines if target IP is on **Local** or **Foreign**
 
 - Foreign - ARP for a Deafault Gateway
 - Local - ARP for Target IP directly
+
+---------
+
+# EveryThing switches DO
 
 
 
