@@ -1,4 +1,4 @@
-# Everything host do to speak on internet
+# Everything Hosts do to speak on Internet
 
 This lesson will illustrate two scenarios
 
