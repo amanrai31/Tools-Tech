@@ -18,5 +18,19 @@ This lesson will illustrate two scenarios
 
 - HOST A uses ARP(ADDRESS RESOLUTION PROTOCOL) to resolve target's MAC Address - ARP request ask for MAC address associated with target IP(ARP request includes sender's MAC address & sender's IP, ARP request is a Broadcast i.e. it is send to everyone on network || to deliver packet to every MAC addr ffff.ffff.ffff is used as default MAC)
 
-- ARP Mapping are stored in an ARP cache (Reciver learns(make this cache) from sender's ARP request which had sender's IP & MAC)
+- ARP Mapping are stored in an ARP cache (Receiver learns(make this cache) from sender's ARP request which had sender's IP & MAC)
+
+- HostB responds by sending an ARP response(Unicast i.e. directly to HostA). HostA populates it's ARP cache with HostB IP/MAC mapping
+
+- Now HostA has HostB's IP & MAC mapping, it creates L2(hop2hop) & DATA is sent to HostB
+
+- If HostB has to communicate than HostB's ARP cache is already populated so HostB can directly send response to HostA
+
+### 2. Host A & B are connected on Internet
+
+
+
+
+
+
 
