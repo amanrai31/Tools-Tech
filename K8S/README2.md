@@ -213,6 +213,7 @@ PVCs
 for storage.
 
 Full Mental Model
+```
 Cluster
    └── Namespace (ocis)
            ├── Helm Release (ocis)
@@ -226,7 +227,9 @@ Cluster
            ├── Service (search)
            ├── PVC (search-data)
            └── Secrets / ConfigMaps
-MOST IMPORTANT THING
+```
+
+## MOST IMPORTANT THING
 
 Kubernetes is mostly:
 
