@@ -1,5 +1,3 @@
-First understand the BIG picture
-
 Your cluster is basically:
 
 ```
@@ -19,13 +17,11 @@ Now Kubernetes needs ways to:
 
 That is why all these concepts exist.
 
-1. Namespace → Folder/Room
+### 1. Namespace → Folder/Room
 
 A Namespace is just a logical grouping.
 
-Think:
-
-Namespace = Folder
+Think: ```Namespace = Folder```
 
 Example:
 
@@ -58,7 +54,7 @@ So YES:
 
 They do NOT exist independently.
 
-2. Deployment → App Manager
+### 2. Deployment → App Manager
 
 Deployment says:
 
@@ -84,7 +80,7 @@ Pods
 
 You usually interact only with Deployment.
 
-3. Pod → Actual Running Container
+### 3. Pod → Actual Running Container
 
 Pod is the REAL thing running.
 
@@ -100,7 +96,7 @@ This is a pod.
 
 Inside it your OCIS search service is running.
 
-4. Service → Stable Network Name
+### 4. Service → Stable Network Name
 
 Pods die and recreate.
 
@@ -118,7 +114,7 @@ http://search
 
 instead of pod IP.
 
-5. PVC → Persistent Disk Storage
+### 5. PVC → Persistent Disk Storage
 
 PVC means:
 
@@ -144,7 +140,7 @@ uploaded files
 
 need PVC.
 
-6. Helm Release → Installed App Instance
+### 6. Helm Release → Installed App Instance
 
 This confuses almost everyone.
 
