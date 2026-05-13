@@ -233,18 +233,20 @@ Cluster
 
 Kubernetes is mostly:
 
-Desired State Management
+```Desired State Management```
 
 You tell it:
 
-"I want 1 search pod running"
+```"I want 1 search pod running"```
 
 Kubernetes continuously ensures it.
 
 If pod dies:
 
-Kubernetes recreates it
-Commands mapping
+```Kubernetes recreates it```
+
+## Commands mapping
+
 See namespaces
 ```
 kubectl get ns
