@@ -21,7 +21,7 @@ That is why all these concepts exist.
 
 A Namespace is just a logical grouping.
 
-Think: ```Namespace = Folder```
+Think: `Namespace = Folder`
 
 Example:
 
@@ -66,14 +66,15 @@ Deployment says:
 
 Example:
 
-Deployment: search
+`Deployment: search`
 
 This deployment manages pods.
 
 If pod crashes:
 
-Deployment recreates it automatically
+`Deployment recreates it automatically`
 
+```
 Real chain:
 
 Deployment
@@ -81,6 +82,7 @@ Deployment
 ReplicaSet
     ↓
 Pods
+```
 
 You usually interact only with Deployment.
 
@@ -90,33 +92,23 @@ Pod is the REAL thing running.
 
 Inside pod:
 
-Container (Docker container)
+`Container (Docker container)`
 
 Example:
 
-search-6d84fc5464-wgtzm
+`search-6d84fc5464-wgtzm`
 
-This is a pod.
-
-Inside it your OCIS search service is running.
+This is a pod. Inside it your OCIS search service is running.
 
 ### 4. Service → Stable Network Name
 
-Pods die and recreate.
-
-So pod IP changes.
+Pods die and recreate. So pod IP changes.
 
 Service gives stable access.
 
-Example:
+Example: `Service: search`
 
-Service: search
-
-Other apps call:
-
-http://search
-
-instead of pod IP.
+Other apps call: `http://search` instead of pod IP.
 
 ### 5. PVC → Persistent Disk Storage
 
@@ -126,15 +118,11 @@ Persistent Volume Claim
 
 Think:
 
-"Please give me storage/disk."
+`"Please give me storage/disk."`
 
-Without PVC:
+Without PVC: `Pod dies → data lost`
 
-Pod dies → data lost
-
-With PVC:
-
-Pod dies → data survives
+With PVC: `Pod dies → data survives`
 
 Example:
 
@@ -146,29 +134,23 @@ need PVC.
 
 ### 6. Helm Release → Installed App Instance
 
-This confuses almost everyone.
-
-Helm is basically:
-
-npm install for Kubernetes
-
-A Helm Chart is a template.
+This confuses almost everyone. Helm is basically: `npm install for Kubernetes`. A Helm Chart is a template.
 
 When you install it:
 
-helm install ocis
+`helm install ocis`
 
 Kubernetes creates:
 
-deployments
-services
-pods
-PVCs
-secrets
+- deployments
+- services
+- pods
+- PVCs
+- secrets
 
 That installed instance is called:
 
-Release
+### Release
 
 Example:
 
@@ -176,41 +158,37 @@ Release Name: ocis
 
 So:
 
-helm install ocis ./chart
+`helm install ocis ./chart`
 
 means:
 
-Install chart instance named "ocis"
+`Install chart instance named "ocis"`
 Your actual system
 
-You likely have:
+You likely have: `Namespace: ocis`
 
-Namespace: ocis
-
-Inside it:
-
-Release: ocis
+Inside it: `Release: ocis`
 
 That release created:
 
+```
 Deployments:
     search
     frontend
     graph
     gateway
     users
+```
 
 Those deployments created:
 
+```
 Pods:
     search-xxx
     frontend-xxx
+```
 
-Some of them may use:
-
-PVCs
-
-for storage.
+Some of them may use: `PVCs` for storage.
 
 Full Mental Model
 ```
