@@ -246,16 +246,28 @@ If pod dies:
 Kubernetes recreates it
 Commands mapping
 See namespaces
+```
 kubectl get ns
+```
 See deployments in namespace
+```
 kubectl -n ocis get deployments
+```
 See pods
+```
 kubectl -n ocis get pods
+```
 See services
+```
 kubectl -n ocis get svc
+```
 See PVCs
+```
 kubectl -n ocis get pvc
+```
 See Helm releases
+```
 helm list -n ocis
+```
 
 Once this hierarchy clicks, 70% of Kubernetes becomes understandable.
