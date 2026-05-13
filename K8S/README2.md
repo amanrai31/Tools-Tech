@@ -25,28 +25,32 @@ Think: ```Namespace = Folder```
 
 Example:
 
+```
 ocis
 monitoring
 default
 kube-system
+```
 
 Inside a namespace you can have:
 
-Deployments
-Pods
-Services
-PVCs
-Secrets
-ConfigMaps
+- Deployments
+- Pods
+- Services
+- PVCs
+- Secrets
+- ConfigMaps
 
 Example:
 
+```
 Namespace: ocis
     ├── Deployment: search
     ├── Deployment: frontend
     ├── Pod: search-xxx
     ├── Service: search
     └── PVC: search-data
+```
 
 So YES:
 
@@ -58,7 +62,7 @@ They do NOT exist independently.
 
 Deployment says:
 
-"I want 1/2/3 copies of this app always running."
+`"I want 1/2/3 copies of this app always running."`
 
 Example:
 
