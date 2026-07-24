@@ -6,7 +6,7 @@
 
 ## Host 
 
-Any device which sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers]. Or in more simple terms - any device which is connected to internet is a host.
+Any device which is connected to internet && sends or recives traffic(Data). [e.g computer, phone, server, IoT devices, printer, cloud servers].
 
 HOST is divided in 2 main categories - Client OR Server.
 
