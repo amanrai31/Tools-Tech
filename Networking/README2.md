@@ -34,8 +34,8 @@ Addressing Scheme - IP addresses(32 bits). L3 Technologies: Routers, Hosts(Anyth
 
 2. Addressing Scheme - PORTS. [0-65535 - for TCP] || [0-65535 - for UDP]. **TCP & UDP are 2 diff strategies to distinguish data Streams**
 
-- TCP favors reliability
-- UDP favours efficiency
+- TCP favors reliability - (Transmission Control Protocol)
+- UDP favours efficiency - (User Datagram Protocol)
 
  **So every dataPacket/request append this information of PORTS too along with MAC & IP**
 
