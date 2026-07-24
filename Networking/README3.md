@@ -2,8 +2,8 @@
 
 This lesson will illustrate two scenarios
 
-- Hosts connected directly to each other (Hosts communicating on same network)
-- Hosts connected on the opposite side of router(through router) => (Hosts communicating on diff network)
+1. Hosts connected directly to each other (Hosts communicating on same network)
+2. Hosts connected on the opposite side of router(through router) => (Hosts communicating on diff network)
 
 ### 1. Host A & B are directly connected
 
